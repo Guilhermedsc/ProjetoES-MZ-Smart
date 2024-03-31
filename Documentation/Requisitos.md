@@ -5,10 +5,7 @@
 - Jorge Bruno Costa Alves - 509718
 - Gabriel Illeis
 
-## 1. Descrição:
-O projeto proposto consiste em desenvolver um website local para auxiliar na administração de uma assistência técnica de celulares. O objetivo é tornar o dia a dia do nosso cliente, o Gustavo, mais eficiente e organizado, permitindo o gerenciamento de clientes e seus respectivos dispositivos.
-
-## 2. Requisitos Funcionais:
+## 1. Requisitos Funcionais:
 
 - **Cadastro de Clientes:** Registro de clientes solicitando informações obrigatórias como:
   - Nome
@@ -43,7 +40,7 @@ O projeto proposto consiste em desenvolver um website local para auxiliar na adm
 
 - **Exportação e Importação de Dados:** Possibilidade de exportar e importar dados para facilitar a migração de informações e para backup.
 
-## 3. Requisitos Não Funcionais:
+## 2. Requisitos Não Funcionais:
 
 - **Usabilidade:** A interface do website deve ser intuitiva e de fácil compreensão para facilitar o uso pelo cliente.
 
