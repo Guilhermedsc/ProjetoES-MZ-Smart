@@ -89,3 +89,4 @@
 - **Card:** sistema acessível em diferentes dispositivos.
 - **Conversation:** O sistema deve ser projetado para ser compatível com dispositivos como computadores, tablets e smartphones, para que Técnico (Usuário) possa gerenciar sua assistência técnica de forma conveniente em qualquer lugar.
 - **Confirmation:** Técnico (Usuário) deve poder acessar todas as funcionalidades do sistema em qualquer dispositivo sem problemas de compatibilidade.
+
