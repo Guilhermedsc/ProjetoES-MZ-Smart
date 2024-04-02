@@ -6,4 +6,4 @@ O projeto proposto consiste em desenvolver um website local para auxiliar na adm
 ## Navegação
 [Requisitos](./Documentation/requirements.md)
 
-[Histórias de Usuário](./Documentation/useStories.md)
+[Histórias de Usuário](./Documentation/userStories.md)
