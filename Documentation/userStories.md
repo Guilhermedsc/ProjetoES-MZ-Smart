@@ -91,13 +91,6 @@
     - Técnico (Usuário) deve ser capaz de realizar todas as tarefas de forma eficiente e sem problemas de usabilidade.
     - A interface deve ser intuitiva, facilitando a execução de todas as operações.
 
-## Proteção de Dados Sensíveis
-- **Card:** garantir a proteção das informações dos clientes e aparelhos.
-- **Conversation:** Precisamos implementar medidas de segurança para proteger os dados sensíveis dos clientes e seus dispositivos contra acesso não autorizado.
-- **Confirmation:**
-    - Técnico (Usuário) deve ter confiança de que suas informações estão protegidas adequadamente pelo sistema.
-    - Todas as informações confidenciais devem ser criptografadas e protegidas contra acessos não autorizados.
-
 ## Desempenho Responsivo
 - **Card:** sistema responsivo e rápido.
 - **Conversation:** O sistema deve ser otimizado para oferecer desempenho rápido e responsivo, mesmo em condições de carga elevada.
@@ -118,11 +111,4 @@
 - **Confirmation:**
     - A equipe de desenvolvimento deve garantir que o código seja fácil de entender e modificar conforme necessário.
     - Todas as funcionalidades e partes do código devem ser documentadas adequadamente para referência futura.
-
-## Suporte Multidispositivo
-- **Card:** sistema acessível em diferentes dispositivos.
-- **Conversation:** O sistema deve ser projetado para ser compatível com dispositivos como computadores, tablets e smartphones, para que Técnico (Usuário) possa gerenciar sua assistência técnica de forma conveniente em qualquer lugar.
-- **Confirmation:**
-    - Técnico (Usuário) deve poder acessar todas as funcionalidades do sistema em qualquer dispositivo sem problemas de compatibilidade.
-    - A interface deve se adaptar de forma responsiva a diferentes tamanhos de tela e dispositivos.
 
