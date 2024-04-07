@@ -2,11 +2,10 @@
 
 ## Cadastro de Clientes
 - **Card:** registrar novos clientes no sistema.
-- **Conversation:** Como usuário, desejo cadastrar novos clientes fornecendo informações obrigatórias como nome, endereço e contato.
+- **Conversation:** Como Técnico (Usuário), desejo cadastrar novos clientes fornecendo informações obrigatórias como nome, endereço e contato.
 - **Confirmation:**
-    - O campo "Nome" é obrigatório e deve ser preenchido.
     - O campo "Cpf" é obrigatório e deve ser preenchido.
-    - O campo "Endereço" é obrigatório e deve ser preenchido.
+    - O campo "Nome" é obrigatório e deve ser preenchido.
     - O campo "Contato" é obrigatório e deve ser preenchido.
     - Após o preenchimento dos campos obrigatórios, o sistema deve gerar automaticamente um ID para o cliente.
     - O sistema deve permitir a edição dos dados do cliente após o cadastro.
@@ -14,25 +13,21 @@
     - Após o cadastro, o sistema deve exibir uma mensagem de confirmação indicando que o cliente foi registrado com sucesso e apresentar as informações cadastradas.
     - Os dados do cliente devem ser acessíveis para consulta e edição posteriormente.
 
-
-
 ## Cadastro de Aparelhos
 - **Card:** registrar informações de novos aparelhos para manutenção.
 - **Conversation:** Como Técnico (Usuário), desejo registrar informações necessárias e opcionais sobre os aparelhos que chegam para manutenção.
 - **Confirmation:**
     - O sistema deve gerar automaticamente um ID para o aparelho.
-    - O campo "Cliente" é obrigatório e deve ser preenchido.
     - O campo "Modelo" é obrigatório e deve ser preenchido.
     - O campo "Descrição do problema" é obrigatório e deve ser preenchido.
-    - O campo "Data de entrada" é obrigatório e deve ser preenchido automaticamente com a data do registro.
-    - O campo "Status" é obrigatório e deve ser selecionado entre as opções: "aguardando avaliação", "aguardando peças", "em manutenção", "aguardando pagamento", "finalizado".
+    - O campo "Data de entrada" é obrigatório e deve ser preenchido automaticamente com a data do registro do aparelho.
+    - O campo "Status" será selecionado automáticamente em: "aguardando avaliação". Posteriormente deve ser possível alterar o status para os
+    seguintes possíveis: "aguardando peças", "em manutenção", "aguardando pagamento", "finalizado".
     - Se o status for "finalizado", os campos "Solução", "Valor do serviço" e "Data de saída" devem ser preenchidos.
     - A senha do aparelho é um campo opcional.
     - Após o registro, o sistema deve exibir uma confirmação de que o aparelho foi cadastrado com sucesso.
     - Os dados do aparelho devem ser acessíveis para consulta e edição posteriormente.
     
-
-
 ## Edição de Informações de Clientes
 - **Card:** editar informações dos clientes cadastrados.
 - **Conversation:** Precisamos oferecer a Técnico (Usuário) a opção de editar informações como endereço ou contato dos clientes já cadastrados.
@@ -75,9 +70,9 @@
     - Após a busca, o sistema deve exibir uma lista de clientes que correspondam ao critério de pesquisa.
     - Caso não haja resultados para a pesquisa, o sistema deve informar ao usuário que nenhum cliente foi encontrado.
 
-## Busca Avançada de Aparelhos
+## Busca de Aparelhos
 - **Card:** buscar aparelhos por diferentes critérios.
-- **Conversation:** Precisamos implementar uma função de busca que permita a Técnico (Usuário) localizar aparelhos por nome do cliente, cpf, modelo de aparelho ou IMEI.
+- **Conversation:** Precisamos implementar uma função de busca que permita ao Técnico (Usuário) localizar aparelhos por modelo de aparelho ou ID.
 - **Confirmation:**
     - O sistema deve apresentar os resultados da busca de forma clara e precisa.
     - A busca deve retornar todos os registros que correspondam aos critérios especificados pelo Técnico (Usuário).
