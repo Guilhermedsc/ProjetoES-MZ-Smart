@@ -1,96 +1,54 @@
 @startuml
+
 class Cliente {
-    - nome: string
     - cpf: string
-    - endereco: string
+    - nome: string
     - contato: string
+    - aparelhos: Aparelho[]
 }
-
-note right of Cliente
-    Representa um cliente que pode ter vários
-    aparelhos e registros de atendimento associados.
-end note
-
 
 class Aparelho {
     - id: int
-    - cliente: Cliente
     - modelo: string
     - descricaoProblema: string
-    - dataEntrada: date
-    - status: Status
+    - dataEntrada: Date
+    - status: string
     - solucao: string
     - valorServico: float
-    - dataSaida: date
-    - senhaAparelho: string
+    - dataSaida: Date
+    - senha: string
+    - imei: string
 }
 
-enum Status {
-    aguardando_avaliacao
-    aguardando_pecas
-    em_manutencao
-    aguardando_pagamento
-    finalizado
-}
-
-Aparelho "1" -- "1..*" Status : possui
-
-note bottom of Aparelho
-    senhaAparelho: Não é obrigatório
-end note
-
-note left of Aparelho
-    Representa um aparelho cadastrado no 
-    sistema, associado a um cliente, com informações 
-    sobre seu status e histórico de atendimento.
-end note
-
-class RegistroAtendimento {
-    - id: int
-    - dataAtendimento: date
-    - solucao: string
-    - valorServico: float
-    - cliente: Cliente
-    - aparelho: Aparelho
-}
-
-note bottom of RegistroAtendimento
-    Registra um atendimento realizado a um cliente 
-    em um aparelho específico incluindo data, solução 
-    e valor do serviço.
-end note
+Cliente " 1 " --> " * " Aparelho
+Aparelho " 1 " --> " 1 " Cliente
 
 class Sistema {
-    - clientes: list<Cliente>
-    - aparelhos: list<Aparelho>
-    - atendimentos: list<RegistroAtendimento>
-
-    + cadastrarCliente(nome: string, endereco: string, contato: string): void
-    + cadastrarAparelho(cliente: Cliente, modelo: string, descricaoProblema: string, 
-    status: string, solucao: string, valorServico: float, senhaAparelho: string): void
-    + editarCliente(cliente: Cliente, nome: string, endereco: string, contato: string): void
-    + editarAparelho(aparelho: Aparelho, modelo: string, descricaoProblema: string, 
-    status: string, solucao: string, valorServico: float, senhaAparelho: string): void
+    + cadastrarCliente(cpf: string, nome: string, contato: string): Cliente
+    + cadastrarAparelho(modelo: string, descricaoProblema: string, dataEntrada: Date, status: string,
+     solucao: string, valorServico: float, dataSaida: Date, senha: string, imei: string): Aparelho
+    + editarCliente(cliente: Cliente): void
+    + editarAparelho(aparelho: Aparelho): void
     + excluirCliente(cliente: Cliente): void
     + excluirAparelho(aparelho: Aparelho): void
-    + buscarClientePorNome(nome: string): Cliente
-    + buscarAparelhoPorID(id: int): Aparelho
-    + buscarAparelhoPorCliente(cliente: Cliente): list<Aparelho>
-    + buscarAparelhoPorModelo(modelo: string): list<Aparelho>
-    + registrarAtendimento(dataAtendimento: date, solucao: string, valorServico: float, cliente: Cliente, aparelho: Aparelho): void
+    + buscarClientePorNome(nome: string): Cliente[]
+    + buscarClientePorCpf(cpf: string): Cliente
+    + buscarAparelhoPorId(id: int): Aparelho
+    + buscarAparelhoPorModelo(modelo: string): Aparelho[]
     + exportarDados(): void
     + importarDados(): void
 }
 
-note bottom of Sistema
-    Representa o sistema de gerenciamento que controla clientes, aparelhos e 
-    registros de atendimento, fornecendo operações para cadastrar, 
-    editar, excluir e buscar informações.
+note left of Cliente
+	nota...
 end note
 
-Cliente "1" -- "*" Aparelho : possui
-Cliente "1" -- "*" RegistroAtendimento : possui
-Aparelho "0..1" -- "*" RegistroAtendimento : atendidoPor
-Sistema "*" -- "*" RegistroAtendimento : registra
+note right of Aparelho
+    nota...
+end note
+
+note bottom of Sistema
+    nota...
+end note
 
 @enduml

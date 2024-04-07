@@ -1,15 +1,14 @@
 ## 1. Requisitos Funcionais:
 
 -   **Cadastro de Clientes:** Registro de clientes solicitando informações obrigatórias como:
-    -   Nome
     -   Cpf
-    -   Endereço
+    -   Nome
     -   Contato
+    -   Aparelhos (lista de aparelhos do cliente)
 
 -   **Cadastro de Aparelhos:** Registro de aparelhos solicitando informações obrigatórias e opcionais:
     -   Obrigatórias:
         -   ID `gerado automaticamente`
-        -   Cliente
         -   Modelo
         -   Descrição do problema
         -   Data de entrada
@@ -20,6 +19,7 @@
         -   Data de saída
     -   Não obrigatória:
         -   Senha do aparelho
+        - IMEI
 
 -   **Edição de Clientes e Aparelhos:** Possibilidade de editar informações tanto de clientes quanto de aparelhos.
 
@@ -27,7 +27,7 @@
 
 -   **Busca de Clientes:** Pesquisa de clientes por nome ou cpf.
 
--   **Busca de Aparelhos:** Pesquisa de aparelhos por ID, cliente, cpf ou modelo.
+-   **Busca de Aparelhos:** Pesquisa de aparelhos por ID ou modelo.
 
 -   **Histórico de Atendimento:** Manter um registro histórico de todos os atendimentos realizados, incluindo detalhes como data, solução e valor do serviço.
 
