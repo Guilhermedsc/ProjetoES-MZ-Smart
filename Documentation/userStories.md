@@ -5,6 +5,7 @@
 - **Conversation:** Como usuário, desejo cadastrar novos clientes fornecendo informações obrigatórias como nome, endereço e contato.
 - **Confirmation:**
     - O campo "Nome" é obrigatório e deve ser preenchido.
+    - O campo "Cpf" é obrigatório e deve ser preenchido.
     - O campo "Endereço" é obrigatório e deve ser preenchido.
     - O campo "Contato" é obrigatório e deve ser preenchido.
     - Após o preenchimento dos campos obrigatórios, o sistema deve gerar automaticamente um ID para o cliente.
@@ -67,9 +68,16 @@
     - Após a exclusão, o sistema deve confirmar que o aparelho foi removido com sucesso.
     - Todos os dados relacionados ao aparelho excluído devem ser removidos do sistema de forma completa.
 
+## Busca de Clientes
+- **Card:** Permitir que usuários pesquisem clientes por nome ou CPF.
+- **Conversation:** Como Técnico (Usuário) do sistema, gostaria de poder realizar uma busca de clientes utilizando o nome ou CPF para encontrar informações específicas de um cliente.
+- **Confirmation:**
+    - Após a busca, o sistema deve exibir uma lista de clientes que correspondam ao critério de pesquisa.
+    - Caso não haja resultados para a pesquisa, o sistema deve informar ao usuário que nenhum cliente foi encontrado.
+
 ## Busca Avançada de Aparelhos
 - **Card:** buscar aparelhos por diferentes critérios.
-- **Conversation:** Precisamos implementar uma função de busca que permita a Técnico (Usuário) localizar aparelhos por nome do cliente, modelo de aparelho ou IMEI.
+- **Conversation:** Precisamos implementar uma função de busca que permita a Técnico (Usuário) localizar aparelhos por nome do cliente, cpf, modelo de aparelho ou IMEI.
 - **Confirmation:**
     - O sistema deve apresentar os resultados da busca de forma clara e precisa.
     - A busca deve retornar todos os registros que correspondam aos critérios especificados pelo Técnico (Usuário).

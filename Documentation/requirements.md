@@ -2,6 +2,7 @@
 
 -   **Cadastro de Clientes:** Registro de clientes solicitando informações obrigatórias como:
     -   Nome
+    -   Cpf
     -   Endereço
     -   Contato
 
@@ -24,9 +25,9 @@
 
 -   **Exclusão de Registros:** Capacidade de excluir registros tanto de clientes quanto de aparelhos.
 
--   **Busca de Clientes:** Pesquisa de clientes por nome.
+-   **Busca de Clientes:** Pesquisa de clientes por nome ou cpf.
 
--   **Busca de Aparelhos:** Pesquisa de aparelhos por ID, cliente ou modelo.
+-   **Busca de Aparelhos:** Pesquisa de aparelhos por ID, cliente, cpf ou modelo.
 
 -   **Histórico de Atendimento:** Manter um registro histórico de todos os atendimentos realizados, incluindo detalhes como data, solução e valor do serviço.
 
