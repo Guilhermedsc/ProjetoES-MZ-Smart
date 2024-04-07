@@ -1,18 +1,36 @@
 # Histórias de Usuário
 
-## Cadastro Inicial do Cliente
-- **Card:** cadastrar novos clientes no sistema.
-- **Conversation:** Precisamos permitir que Técnico (Usuário) insira informações como nome, endereço e contato para registrar novos clientes.
+## Cadastro de Clientes
+- **Card:** registrar novos clientes no sistema.
+- **Conversation:** Como usuário, desejo cadastrar novos clientes fornecendo informações obrigatórias como nome, endereço e contato.
 - **Confirmation:**
-    - Após preencher os campos necessários, o sistema deve exibir uma mensagem de confirmação indicando que o cliente foi cadastrado com sucesso.
-    - Os dados inseridos devem ser armazenados no banco de dados do sistema para acesso posterior.
+    - O campo "Nome" é obrigatório e deve ser preenchido.
+    - O campo "Endereço" é obrigatório e deve ser preenchido.
+    - O campo "Contato" é obrigatório e deve ser preenchido.
+    - Após o preenchimento dos campos obrigatórios, o sistema deve gerar automaticamente um ID para o cliente.
+    - O sistema deve permitir a edição dos dados do cliente após o cadastro.
+    - Após a edição, o sistema deve exibir uma mensagem de confirmação indicando que as alterações foram salvas com sucesso.
+    - Após o cadastro, o sistema deve exibir uma mensagem de confirmação indicando que o cliente foi registrado com sucesso e apresentar as informações cadastradas.
+    - Os dados do cliente devem ser acessíveis para consulta e edição posteriormente.
 
-## Cadastro de Aparelho com Informações Opcionais
-- **Card:** registrar os aparelhos dos clientes com informações obrigatórias e opcionais.
-- **Conversation:** O sistema deve permitir que Técnico (Usuário) insira informações obrigatórias como modelo e IMEI, além de informações opcionais como a senha do aparelho, para registrar com precisão os dispositivos em manutenção.
+
+
+## Cadastro de Aparelhos
+- **Card:** registrar informações de novos aparelhos para manutenção.
+- **Conversation:** Como Técnico (Usuário), desejo registrar informações necessárias e opcionais sobre os aparelhos que chegam para manutenção.
 - **Confirmation:**
-    - Após o registro do aparelho, o sistema deve exibir uma mensagem de confirmação indicando que o cadastro foi concluído com sucesso.
-    - Todas as informações fornecidas, tanto obrigatórias quanto opcionais, devem ser armazenadas corretamente no banco de dados.
+    - O sistema deve gerar automaticamente um ID para o aparelho.
+    - O campo "Cliente" é obrigatório e deve ser preenchido.
+    - O campo "Modelo" é obrigatório e deve ser preenchido.
+    - O campo "Descrição do problema" é obrigatório e deve ser preenchido.
+    - O campo "Data de entrada" é obrigatório e deve ser preenchido automaticamente com a data do registro.
+    - O campo "Status" é obrigatório e deve ser selecionado entre as opções: "aguardando avaliação", "aguardando peças", "em manutenção", "aguardando pagamento", "finalizado".
+    - Se o status for "finalizado", os campos "Solução", "Valor do serviço" e "Data de saída" devem ser preenchidos.
+    - A senha do aparelho é um campo opcional.
+    - Após o registro, o sistema deve exibir uma confirmação de que o aparelho foi cadastrado com sucesso.
+    - Os dados do aparelho devem ser acessíveis para consulta e edição posteriormente.
+    
+
 
 ## Edição de Informações de Clientes
 - **Card:** editar informações dos clientes cadastrados.
