@@ -39,16 +39,4 @@ class Sistema {
     + importarDados(): void
 }
 
-note left of Cliente
-	nota...
-end note
-
-note right of Aparelho
-    nota...
-end note
-
-note bottom of Sistema
-    nota...
-end note
-
 @enduml
