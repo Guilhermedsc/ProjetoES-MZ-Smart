@@ -15,4 +15,4 @@ O projeto proposto consiste em desenvolver um website local para auxiliar na adm
 
 [Diagramas](./Documentation/Diagrams/diagrams.md)
 
-[Tecnologias](./Documentation/technologies.md)
+[Tecnologias e Módulos](./Documentation/technologies.md)
