@@ -1,12 +1,12 @@
 ## Tecnologias
 - Frontend
-    - Reactjs
+    - Nextjs (Reactjs)
     - Tailwindcss
 
 - Backend
     - Typescript
     - Nodejs
-    - Banco de dados
+    - Banco de Dados: MongoDB
 
 ## Módulos para Entidades:
 - **Cliente:**
