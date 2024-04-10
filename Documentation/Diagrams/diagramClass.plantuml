@@ -1,6 +1,7 @@
 @startuml
 
 class Cliente {
+    - id: int
     - cpf: string
     - nome: string
     - contato: string

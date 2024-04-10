@@ -1,6 +1,7 @@
 ## 1. Requisitos Funcionais:
 
 -   **Cadastro de Clientes:** Registro de clientes solicitando informações obrigatórias como:
+    -   ID `Gerado automaticamente`
     -   Cpf
     -   Nome
     -   Contato
@@ -8,7 +9,8 @@
 
 -   **Cadastro de Aparelhos:** Registro de aparelhos solicitando informações obrigatórias e opcionais:
     -   Obrigatórias:
-        -   ID `gerado automaticamente`
+        -   ID `Gerado automaticamente`
+        -   IDClient `Id linkado ao cliente`
         -   Modelo
         -   Descrição do problema
         -   Data de entrada
