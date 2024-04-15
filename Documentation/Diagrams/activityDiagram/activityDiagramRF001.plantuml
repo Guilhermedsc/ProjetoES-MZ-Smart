@@ -1,0 +1,18 @@
+@startuml activityDiagramRF001
+
+title RF 001 - Cadastro de Clientes
+
+(*) --> "Informações do Cliente"
+
+if "Dados válidos?" then
+  -->[Sim] "Validar Dados"
+  -->[Sim] "Salvar Dados no Banco de Dados"
+  --> "Retornar Cliente"
+  --> (*)
+else
+  -->[Não] "Informações Inválidas"
+  --> "Fornecer Feedback de Erro"
+  --> (*)
+endif
+
+@enduml

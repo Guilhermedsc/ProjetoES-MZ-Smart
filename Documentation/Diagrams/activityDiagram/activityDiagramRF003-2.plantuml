@@ -1,0 +1,17 @@
+@startuml activityDiagramRF003.2
+
+title RF 003.2 - Editar Aparelho
+
+(*) --> "Fornecer Aparelho Existente e Novos Dados"
+
+if "Aparelho Existe?" then
+  -->[Sim] "Atualizar Aparelho no Banco de Dados"
+  --> "Aparelho Atualizado"
+  --> (*)
+else
+  -->[Não] "Aparelho Não Encontrado"
+  --> "Fornecer Feedback de Erro"
+  --> (*)
+endif
+
+@enduml

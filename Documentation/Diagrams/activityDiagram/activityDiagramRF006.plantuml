@@ -1,0 +1,22 @@
+@startuml activityDiagramRF006
+
+title RF 006 - Buscar Aparelho
+
+(*) --> "Fornecer Credenciais"
+
+if "Credenciais Válidas?" then
+  -->[Sim] "Consultar Banco de Dados por Aparelho"
+  if "Aparelho Encontrado?" then
+    -->[Sim] "Retornar Aparelho"
+    --> (*)
+  else
+    -->[Não] "Aparelho Não Encontrado"
+    --> "Fornecer Feedback de Erro"
+    --> (*)
+  endif
+else
+  -->[Não] "Credenciais Inválidas"
+  --> "Fornecer Feedback de Erro"
+endif
+
+@enduml

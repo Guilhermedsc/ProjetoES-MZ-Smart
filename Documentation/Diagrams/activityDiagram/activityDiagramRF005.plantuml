@@ -1,0 +1,22 @@
+@startuml activityDiagramRF005
+
+title RF 005 - Buscar Cliente
+
+(*) --> "Fornecer Credenciais"
+
+if "Credenciais Válidas?" then
+  -->[Sim] "Consultar Banco de Dados por Cliente"
+  if "Cliente Encontrado?" then
+    -->[Sim] "Retornar Cliente"
+    --> (*)
+  else
+    -->[Não] "Cliente Não Encontrado"
+    --> "Fornecer Feedback de Erro"
+    --> (*)
+  endif
+else
+  -->[Não] "Credenciais Inválidas"
+  --> "Fornecer Feedback de Erro"
+endif
+
+@enduml

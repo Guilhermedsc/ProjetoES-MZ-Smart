@@ -1,0 +1,17 @@
+@startuml activityDiagramRF003.1
+
+title RF 003.1 - Editar Cliente
+
+(*) --> "Fornecer Cliente Existente e Novos Dados"
+
+if "Credenciais Existem?" then
+  -->[Sim] "Atualizar Cliente no Banco de Dados"
+  --> "Cliente Atualizado"
+  --> (*)
+else
+  -->[Não] "Credenciais Não Encontradas"
+  --> "Fornecer Feedback de Erro"
+  --> (*)
+endif
+
+@enduml

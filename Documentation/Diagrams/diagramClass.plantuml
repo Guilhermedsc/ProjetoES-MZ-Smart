@@ -1,4 +1,4 @@
-@startuml
+@startuml classDiagram
 
 class Cliente {
     - id: int

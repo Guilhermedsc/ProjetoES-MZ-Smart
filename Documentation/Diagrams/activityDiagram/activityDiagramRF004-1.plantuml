@@ -1,0 +1,17 @@
+@startuml activityDiagramRF004.1
+
+title RF 004.1 - Excluir Cliente
+
+(*) --> "Fornecer Cliente Existente"
+
+if "Cliente Existe?" then
+  -->[Sim] "Remover Cliente do Banco de Dados"
+  --> "Cliente Removido"
+  --> (*)
+else
+  -->[Não] "Cliente Não Encontrado"
+  --> "Fornecer Feedback de Erro"
+  --> (*)
+endif
+
+@enduml

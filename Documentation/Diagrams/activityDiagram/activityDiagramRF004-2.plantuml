@@ -1,0 +1,17 @@
+@startuml activityDiagramRF004.2
+
+title RF 004.2 - Excluir Aparelho
+
+(*) --> "Fornecer Aparelho Existente"
+
+if "Aparelho Existe?" then
+  -->[Sim] "Remover Aparelho do Banco de Dados"
+  --> "Aparelho Removido"
+  --> (*)
+else
+  -->[Não] "Aparelho Não Encontrado"
+  --> "Fornecer Feedback de Erro"
+  --> (*)
+endif
+
+@enduml

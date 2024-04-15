@@ -1,0 +1,17 @@
+@startuml activityDiagramRF002
+
+title RF 002 - Cadastro de Aparelhos
+
+(*) --> "Informações do Aparelho"
+
+if "Cliente existe?" then
+  -->[Sim] "Salvar no Banco de Dados"
+  --> "Retorna Aparelho"
+  --> (*)
+else
+  -->[Não] "Cliente Não Existe"
+  --> "Fornecer Feedback de Erro"
+  --> (*)
+endif
+
+@enduml
