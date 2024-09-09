@@ -1,6 +1,6 @@
 import { Inject, Injectable, NotFoundException } from "@nestjs/common"
 import { constants } from "src/utils/constants"
-import { ObjectId, Repository } from "typeorm"
+import { Repository } from "typeorm"
 import { Devices } from "./devices.entity"
 import { CreateDeviceDTO } from "./dots/create.devices.dto"
 import { UpdateDeviceSolutionDTO, UpdateDeviceStatusDTO } from "./dots/update.devices.dto"
@@ -29,17 +29,28 @@ export class DevicesService {
     }
 
     async updateStatus(id: string, data: UpdateDeviceStatusDTO) {
-        const _id = checkDevice(id, this.repository)
+        const _id = await checkDevice(id, this.repository)
         return await this.repository.update(_id, { status: data.status })
     }
 
     async updateSolution(id: string, data: UpdateDeviceSolutionDTO) {
-        const _id = checkDevice(id, this.repository)
+        const _id = await checkDevice(id, this.repository)
         return await this.repository.update(_id, {
             value: data.value,
             status: "waiting_payment",
             solution_description: data.solution_description,
             solution_at: new Date()
         })
+    }
+
+    async delete(id: string) {
+        const _id = await checkDevice(id, this.repository)
+        const deleteResult = await this.repository.delete(_id)
+
+        if (deleteResult.affected === 0) {
+            throw new NotFoundException(`Device with ID ${id} not found`)
+        }
+
+        return { message: "Device deleted successfully" }
     }
 }

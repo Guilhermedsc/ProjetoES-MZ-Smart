@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put, Query } from "@nestjs/common"
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common"
 import { constants } from "src/utils/constants"
 import { DevicesService } from "./devices.service"
 import { CreateDeviceDTO } from "./dots/create.devices.dto"
@@ -29,5 +29,10 @@ export class DevicesController {
     @Put(':id/solution')
     async updateDeviceSolution(@Param('id') id: string, @Body() data: UpdateDeviceSolutionDTO) {
         return await this.service.updateSolution(id, data)
+    }
+
+    @Delete(':id')
+    async deleteDevice(@Param('id') id: string) {
+        return await this.service.delete(id)
     }
 }
