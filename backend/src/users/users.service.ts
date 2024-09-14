@@ -3,16 +3,18 @@ import { Users } from "./users.entity"
 import { Repository } from "typeorm"
 import { constants } from "src/utils/constants"
 import { CreateUserDTO } from "./dtos/create.users.dto"
-import { checkDevice } from "src/devices/devices.utils"
 import { checkUser } from "./users.utils"
 import { UpdateUserDTO } from "./dtos/update.users.dto"
 import { ObjectId } from "mongodb"
+import { DevicesService } from "src/devices/devices.service"
 
 @Injectable()
 export class UsersService {
     constructor (
         @Inject(constants.UsersRepository)
-        private readonly repository: Repository<Users>
+        private readonly repository: Repository<Users>,
+
+        private readonly devicesService: DevicesService,
     ) {}
 
     async create(user: CreateUserDTO) {
@@ -29,18 +31,19 @@ export class UsersService {
     }
 
     async deleteUser(id: string) {
-        const _id = checkUser(id, this.repository)
+        const _id = await checkUser(id, this.repository)
+        await this.devicesService.deleteAllOfUser(_id)
         return await this.repository.delete(_id)
     }
-    
+
     async updateUser(id: string, updateUserDTO: UpdateUserDTO) {
         const objectId = new ObjectId(id); // Converte a string `id` para `ObjectId`
         const user = await this.repository.findOne({ where: { _id: objectId } });
-    
+
         if (!user) {
             throw new NotFoundException('User not found');
         }
-    
+
         // Atualiza apenas os campos fornecidos
         if (updateUserDTO.name) {
             user.name = updateUserDTO.name;
@@ -48,9 +51,9 @@ export class UsersService {
         if (updateUserDTO.phone_number) {
             user.phone_number = updateUserDTO.phone_number;
         }
-    
+
         await this.repository.save(user);
         return user;
     }
-    
+
 }

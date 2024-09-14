@@ -6,7 +6,7 @@ export class Devices {
     @ObjectIdColumn()
     _id: ObjectId
 
-    @ObjectIdColumn({ foreignKeyConstraintName: "user_id" })
+    @ObjectIdColumn({ name: "user_id", foreignKeyConstraintName: "user_id" })
     user_id: ObjectId
 
     @Column()
@@ -28,7 +28,7 @@ export class Devices {
     IMEI?: string
 
     @Column({ nullable: true})
-    Senha?: string 
+    password?: string
 
     @Column({ nullable: true })
     solution_description?: string

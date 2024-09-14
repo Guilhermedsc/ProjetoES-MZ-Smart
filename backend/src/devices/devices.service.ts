@@ -6,6 +6,7 @@ import { CreateDeviceDTO } from "./dots/create.devices.dto"
 import { UpdateDeviceSolutionDTO, UpdateDeviceStatusDTO } from "./dots/update.devices.dto"
 import { GetDevicesDTO } from "./dots/get.devices.dto"
 import { checkDevice, constructQuery } from "./devices.utils"
+import { ObjectId } from 'mongodb'
 
 @Injectable()
 export class DevicesService {
@@ -17,6 +18,7 @@ export class DevicesService {
     async create(device: CreateDeviceDTO) {
         const new_device = await this.repository.save({
             ...device,
+            user_id: new ObjectId(device.user_id),
             registered_at: new Date(),
             status: "new"
         })
@@ -52,5 +54,9 @@ export class DevicesService {
         }
 
         return { message: "Device deleted successfully" }
+    }
+
+    async deleteAllOfUser(user_id: ObjectId) {
+        return await this.repository.delete({ user_id })
     }
 }

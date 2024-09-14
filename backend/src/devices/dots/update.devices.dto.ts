@@ -1,4 +1,4 @@
-import { IsDecimal, IsIn, IsString, Length, Min } from "class-validator"
+import { IsIn, IsNumber, IsString, Length, Min } from "class-validator"
 
 const devicesStatus = ['new', 'waiting_for_parts', 'in_progress', 'waiting_payment', 'done'] as const
 export type DeviceStatus = typeof devicesStatus[number]
@@ -10,7 +10,7 @@ export class UpdateDeviceStatusDTO {
 }
 
 export class UpdateDeviceSolutionDTO {
-    @IsDecimal()
+    @IsNumber()
     @Min(0)
     value: number
 

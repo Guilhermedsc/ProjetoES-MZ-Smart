@@ -4,13 +4,13 @@ import { GetDevicesDTO } from "./dots/get.devices.dto"
 import { Devices } from "./devices.entity"
 import { Repository } from "typeorm"
 
-export function checkDevice(id: string, repository: Repository<Devices>) {
+export async function checkDevice(id: string, repository: Repository<Devices>) {
     if (!ObjectId.isValid(id)) {
         throw new NotFoundException("Device not found")
     }
 
     const _id = new ObjectId(id)
-    if (!repository.findOne({ where: { _id } })) {
+    if (!await repository.findOne({ where: { _id } })) {
         throw new NotFoundException("Device not found")
     }
 

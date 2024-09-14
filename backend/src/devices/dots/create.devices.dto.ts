@@ -17,6 +17,5 @@ export class CreateDeviceDTO {
     IMEI?: string
 
     @IsOptional()
-    Senha?: string
-
+    password?: string
 }
