@@ -1,7 +1,12 @@
+'use client'
+
 import CustomersPage from "@components/customers-page"
+import { UsersFiltersProvider } from "@contexts/users-filters"
 
 export default function Customers() {
   return (
-    <CustomersPage />
+    <UsersFiltersProvider>
+      <CustomersPage />
+    </UsersFiltersProvider>
   )
 }

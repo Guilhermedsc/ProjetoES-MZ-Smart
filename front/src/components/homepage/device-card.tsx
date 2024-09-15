@@ -15,8 +15,16 @@ type DeviceCardProps = {
   onClick?: (device: Devices) => void
 }
 
+let printed = false
+
 export default function DeviceCard({ device, onClick }: DeviceCardProps) {
   const { users } = useContext(UsersContext)
+
+  if (!Object.keys(users).includes(device.user_id) && !printed) {
+    console.table(users)
+    console.log(device)
+    printed = true
+  }
 
   return (
     <Card className="text-gray-dark h-fit" tabIndex={0} onClick={onClick ? () => onClick(device) : undefined}>

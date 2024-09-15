@@ -1,5 +1,5 @@
 import { normalizeString } from "@utils/string"
-import React, { forwardRef, LegacyRef, useCallback, useRef } from "react"
+import React, { useRef } from "react"
 
 export type Option<T> = {
   value: T
@@ -10,19 +10,20 @@ type SelectFieldProps<T> = Omit<React.HTMLAttributes<HTMLInputElement>, 'onSelec
   label: string
   options: Option<T>[]
   onSelect: (option: Option<T>) => void
+  labelAsPlaceholder?: boolean
   error?: string
   name?: string
   disabled?: boolean
 }
 
-export default function SelectField<T>({ label, options, error, onSelect, ...props }: SelectFieldProps<T>) {
+export default function SelectField<T>({ label, options, error, labelAsPlaceholder, onSelect, ...props }: SelectFieldProps<T>) {
   const id = props.id || props.name || label.toLowerCase().replace(/ /g, "-")
   const [focusedOption, setFocusedOption] = React.useState<number | null>(null)
   const [text, setText] = React.useState("")
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const filteredOptions = options.filter((option) => normalizeString(option.label).includes(normalizeString(text)))
+  const filteredOptions = options.filter((option) => option.value == null || normalizeString(option.label).includes(normalizeString(text)))
 
   return (
     <div
@@ -36,13 +37,15 @@ export default function SelectField<T>({ label, options, error, onSelect, ...pro
       }}
     >
 
-      <label className={`text-sm font-bold ${error ? "text-red-500" : "text-gray-700"}`} htmlFor={id}>{label}</label>
+
+      {!labelAsPlaceholder && <label className={`text-sm font-bold ${error ? "text-red-500" : "text-gray-700"}`} htmlFor={id}>{label}</label>}
       <input
         id={id}
         ref={inputRef}
         type="text"
         autoComplete="off"
-        className={`border bg-gray-20 rounded p-2 focus:border-green-dark
+        placeholder={labelAsPlaceholder ? label : ""}
+        className={`border bg-gray-20 rounded p-2 focus:border-green-dark text-black
           focus:shadow-blur focus:shadow-color-green-dark-20 focus:outline-none
           ${error ? "border-red-500" : "border-gray-300"}
           ${props.disabled ? "text-gray-500 cursor-not-allowed" : ""}
@@ -61,7 +64,7 @@ export default function SelectField<T>({ label, options, error, onSelect, ...pro
           <li
             key={index}
             tabIndex={-1}
-            className={`pl-2 overflow-hidden text-ellipsis text-nowrap cursor-pointer border h-8 leading-8
+            className={`pl-2 overflow-hidden text-ellipsis text-nowrap cursor-pointer border h-8 leading-8 text-black
               hover:bg-green-dark-20
               ${focusedOption === index ? 'bg-green-dark-20' : ''}
               `}

@@ -18,3 +18,5 @@ type Devices = {
 type CreateDevice = Pick<Devices, 'user_id' | 'model' | 'description' | 'IMEI' | 'password'>
 type UpdateDeviceStatus = Pick<Devices, 'status'>
 type UpdateDeviceSolution = Pick<Devices, 'solution_description' | 'value'>
+
+type DevicesFilters = Partial<Pick<Devices, 'user_id' | 'model' | 'status'>>
