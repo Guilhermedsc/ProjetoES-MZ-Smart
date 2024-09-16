@@ -29,6 +29,7 @@ export default function Homepage() {
       setUsers(usersResponse)
       setIsLoading(false)
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

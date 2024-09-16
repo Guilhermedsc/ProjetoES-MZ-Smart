@@ -67,7 +67,7 @@ export default function RegisterDeviceModal({ ...props }: RegisterDeviceModalPro
     if (props.isOpen) {
       reset()
     }
-  }, [props.isOpen])
+  }, [props.isOpen, reset])
 
   return (
     <Modal {...props}>

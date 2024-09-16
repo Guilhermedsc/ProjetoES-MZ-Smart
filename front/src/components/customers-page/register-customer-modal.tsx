@@ -63,7 +63,7 @@ export default function RegisterCustomerModal({ initialData, ...props }: Registe
     if (props.isOpen) {
       reset()
     }
-  }, [props.isOpen])
+  }, [props.isOpen, reset])
 
   return (
     <Modal {...props} >

@@ -21,7 +21,7 @@ type UpdateDeviceSolutionFormSchema = z.infer<typeof updateDeviceSolutionFormSch
 export default function UpdateDeviceSolutionModal({ device, onClose }: UpdateDeviceSolutionModalProps) {
   const [isLoading, setIsLoading] = useState(false)
 
-  const { handleSubmit, register, reset, setValue, formState: { errors } } = useForm<UpdateDeviceSolutionFormSchema>({
+  const { handleSubmit, register, formState: { errors } } = useForm<UpdateDeviceSolutionFormSchema>({
     resolver: zodResolver(updateDeviceSolutionFormSchema),
     defaultValues: {
       solution_description: "",
