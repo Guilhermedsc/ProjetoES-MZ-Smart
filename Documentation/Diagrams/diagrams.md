@@ -9,6 +9,8 @@ Este diagrama de classes descreve a estrutura de um sistema de gerenciamento de 
 
 - **Relacionamento Cliente-Aparelho:** Há um relacionamento entre Cliente e Aparelho, indicando que um Cliente pode possuir vários Aparelhos (um para muitos). Isso é representado pela seta `"1" --> "*"`, significando que um Cliente possui muitos Aparelhos. Além disso, há outra seta `"1" --> "1"`, que indica que um Aparelho pertence a um único Cliente.
 
+- **Administrador:** Existe para usar os métodos da entidade Sistema. Dessa forma o Admin consegue controlar de forma eficiente as entidades Cliente e Aparelhos.
+
 - **Sistema:** A classe Sistema representa a camada de negócios do sistema. Ela contém vários métodos para operações como cadastrar, editar, excluir e buscar clientes e aparelhos, além de métodos para exportar e importar dados.
 
 

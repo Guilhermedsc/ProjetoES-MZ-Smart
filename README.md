@@ -133,6 +133,8 @@ dependências externas.
 
 Casos de Erro: Incluímos verificações para garantir que o sistema lida corretamente com exceções e erros.
 
+**OBS:** Os arquivos dos testes são os que possuem a extensão **".spec.ts"**, por exemplo: **"devices.controllers.spec.ts"**
+
 Veja a implementação dos testes de cliente [aqui](./backend/src/devices/) e dos testes de aparelhos [aqui](./backend/src/users/).
 
 ## 📝 Testes Sistemicos <a id="testes"></a>
