@@ -45,7 +45,9 @@ O projeto utiliza uma combinação de tecnologias modernas para garantir desempe
   - 🧪 Testes Automatizados: [Jest](https://jestjs.io)
 ## 🌐 Acesso ao Ambiente de Desenvolvimento <a id="dev"></a>
 
-O projeto está disponível para acesso em ambiente de desenvolvimento através do seguinte link: http://206.42.26.185:3002/
+O projeto está disponível para acesso em ambiente de desenvolvimento através do seguinte link:
+
+<a href="http://206.42.26.185:3002/" target="_blank">http://206.42.26.185:3002/</a>
 ## 🔧 Requisitos <a id="requisitos"></a>
 Para rodar o projeto localmente, é necessário ter os seguintes pré-requisitos instalados:
 
