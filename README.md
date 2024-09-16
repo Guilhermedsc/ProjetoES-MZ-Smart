@@ -6,6 +6,7 @@
 - [📖 Sobre o Projeto](#sobre)
 - [✨ Funcionalidades Principais](#funcionalidades)
 - [💻 Tecnologias Utilizadas](#tecnologias)
+- [🌐 Acesso ao Ambiente de Desenvolvimento](#acesso)
 - [🔧 Requisitos](#requisitos)
 - [⚙️ Instalação e Configuração](#config)
 - [👥 Histórias de Usuário](#hist)
@@ -42,6 +43,9 @@ O projeto utiliza uma combinação de tecnologias modernas para garantir desempe
   - 🌿 Versionamento: Git e GitHub
   - 📦 Gerenciamento de Pacotes: npm
   - 🧪 Testes Automatizados: [Jest](https://jestjs.io)
+## 🌐 Acesso ao Ambiente de Desenvolvimento <a id="dev"></a>
+
+O projeto está disponível para acesso em ambiente de desenvolvimento através do seguinte link: http://206.42.26.185:3002/
 ## 🔧 Requisitos <a id="requisitos"></a>
 Para rodar o projeto localmente, é necessário ter os seguintes pré-requisitos instalados:
 
