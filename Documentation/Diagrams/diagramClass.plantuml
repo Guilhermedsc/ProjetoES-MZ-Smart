@@ -40,4 +40,12 @@ class Sistema {
     + importarDados(): void
 }
 
+class Administrador {
+    + gerirSistema(): void
+}
+
+Administrador --> Sistema : "usa"
+Administrador --> Cliente : "Administra"
+Administrador --> Aparelho : "Administra"
+
 @enduml

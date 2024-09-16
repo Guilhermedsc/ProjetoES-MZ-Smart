@@ -1,0 +1,35 @@
+@startuml activityDiagram
+
+title Gerenciamento de Eventos e Submissão de Artigos Científicos
+
+(*) --> "Cadastro de Membro"
+--> "Preenche Informações Pessoais"
+--> "Sistema Verifica e Salva os Dados"
+
+--> "Cadastro de Instituição"
+--> "Preenche Informações da Instituição"
+--> "Sistema Verifica e Salva os Dados"
+
+--> "Criação de Evento"
+--> "Coordenador Cadastra Novo Evento"
+--> "Sistema Verifica e Salva os Dados"
+
+--> "Definição do Comitê de Programa"
+--> "Coordenador Define Membros do Comitê"
+--> "Sistema Verifica e Salva os Dados"
+
+--> "Submissão de Artigos"
+--> "Autor Submete Artigo"
+--> "Sistema Verifica e Salva os Dados, Gera Número do Artigo"
+
+--> "Designação de Avaliadores"
+--> "Coordenador Designa Avaliadores"
+--> "Sistema Verifica e Salva as Designações, Garantindo Ausência de Conflitos"
+
+--> "Avaliação de Artigos"
+--> "Avaliador Realiza Avaliação"
+--> "Sistema Verifica e Salva a Avaliação"
+
+--> (*)
+
+@enduml

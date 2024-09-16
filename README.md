@@ -13,6 +13,7 @@
 - [📊 Diagramas](#diagramas)
 - [👨‍💻 Equipe de Desenvolvimento](#equipe)
 - [📥 Contribuições](#contrib)
+- [📝 Testes sistemicos](#testes)
 
 ## 📖 Sobre o Projeto <a id="sobre"></a>
 O **MZ Smart** é uma plataforma web desenvolvida para simplificar e organizar o fluxo de trabalho de assistências técnicas de celulares e tablets. O sistema permite o gerenciamento de clientes, dispositivos e pedidos de serviço de maneira eficiente, facilitando a administração diária e a rastreabilidade de informações.
@@ -30,19 +31,23 @@ Este projeto foi criado com o intuito de atender às necessidades do nosso clien
 O projeto utiliza uma combinação de tecnologias modernas para garantir desempenho, escalabilidade e uma experiência de usuário fluida.
 
 - **Frontend**:
-  - ⚛️ [Next.js](https://nextjs.org/) (ReactJS)
-  - 🎨 [Tailwind CSS](https://tailwindcss.com/)
-  - ⌨️ [TypeScript](https://www.typescriptlang.org/)
+
+  ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
 - **Backend**:
-  - 🛠 [NestJS](https://nestjs.com/) com TypeORM
-  - 🗃 Banco de Dados: [MongoDB](https://www.mongodb.com/)
-  - ⌨️ [TypeScript](https://www.typescriptlang.org/)
+
+  ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+  ![TypeORM](https://img.shields.io/badge/TypeORM-0A0A0A?style=for-the-badge&logo=typeorm&logoColor=white)
+  ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
 - **Outras Tecnologias**:
-  - 🌿 Versionamento: Git e GitHub
-  - 📦 Gerenciamento de Pacotes: npm
-  - 🧪 Testes Automatizados: [Jest](https://jestjs.io)
+
+  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+  ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+  ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 ## 🌐 Acesso ao Ambiente de Desenvolvimento <a id="dev"></a>
 
 O projeto está disponível para acesso em ambiente de desenvolvimento através do seguinte link:
@@ -87,23 +92,61 @@ O servidor estará rodando em [http://localhost:3000](http://localhost:3000).
 
 ## 👥 Histórias de Usuário <a id="hist"></a>
 
-As histórias de usuário detalham as principais interações entre o usuário final e o sistema, garantindo que todas as funcionalidades atendam às expectativas e necessidades do cliente.
+As histórias de usuário detalham as principais funcionalidades do sistema para técnicos.
+
+- **Cadastro de Clientes:** Registrar novos clientes com campos obrigatórios (CPF, nome).
+- **Cadastro de Aparelhos:** Adicionar aparelhos para manutenção com informações essenciais (modelo, problema).
+- **Edição de Clientes/Aparelhos:** Editar informações já cadastradas para mantê-las atualizadas.
+- **Busca de Clientes/Aparelhos:** Pesquisar clientes por CPF/nome e aparelhos por modelo/ID.
+- **Exclusão de Registros:** Remover registros de clientes e aparelhos que não são mais necessários.
+- **Agendamento de Atendimentos:** Agendar horários de atendimento para melhor organização.
+- **Histórico de Atendimento:** Visualizar um histórico detalhado de atendimentos.
 
 Confira a lista completa de histórias de usuário [aqui](./Documentation/userStories.md).
 
+
 ## 📊 Diagramas <a id="diagramas"></a>
 
-Os diagramas de fluxo e arquitetura são uma parte fundamental do desenvolvimento, ajudando a visualizar como os diferentes módulos do sistema se integram.
+Os **diagramas de classe** e **diagramas de atividade** foram criados para ilustrar a arquitetura e o fluxo do sistema de gerenciamento de clientes e aparelhos.
+
+# Diagrama de classes:
+ Representa as principais entidades do sistema: Cliente, Aparelho, e Sistema. Cada classe foi implementada com seus atributos e métodos, destacando o relacionamento 1 para muitos entre clientes e aparelhos. A classe Sistema centraliza operações como cadastro, edição, exclusão, e busca, garantindo a modularidade e escalabilidade do sistema.
+Diagrama de Atividades
+
+# Diagramas de atividades:
+Detalham os fluxos dos principais requisitos funcionais (RFs), como cadastro, edição, exclusão e busca de clientes e aparelhos. Cada fluxo foi implementado conforme o diagrama, assegurando a validação de dados, interação com o banco de dados e feedback ao usuário.
 
 Veja os diagramas [aqui](./Documentation/Diagrams/diagrams.md).
+
+## 🤖 Testes Unitários <a id="testesUnit"></a>
+
+Implementamos 25 testes unitários para garantir a robustez e o funcionamento correto do backend. Estes testes cobrem todas as rotas principais e funcionalidades do sistema, incluindo operações de criação, leitura, atualização e exclusão.
+Abordagem dos Testes
+
+Cobertura Completa: Testamos rotas e funcionalidades para clientes e aparelhos.
+
+Framework: Utilizamos Jest para uma execução eficiente e relatórios detalhados.
+
+Mocking e Spying: Isolamos a lógica de teste usando mocks e spies para evitar
+dependências externas.
+
+Casos de Erro: Incluímos verificações para garantir que o sistema lida corretamente com exceções e erros.
+
+Veja a implementação dos testes de cliente [aqui](./backend/src/devices/) e dos testes de aparelhos [aqui](./backend/src/users/).
+
+## 📝 Testes Sistemicos <a id="testes"></a>
+
+Os testes sistêmicos da aplicação foram feitas de forma manual, eles garantem que todos os módulos e funcionalidades da aplicação estejam funcionando de forma integrada e correta. Esses testes simulam o uso real do sistema, verificando desde o cadastro de clientes e aparelhos até a busca, edição, exclusão de dados, e outras funcionalidades críticas. O objetivo é identificar possíveis falhas ou incompatibilidades entre os componentes, assegurando uma experiência estável e confiável para o usuário.
+
+Veja a planilha de testes [aqui](./Documentation/Testes%20sistemicos.pdf).
 
 ## 👨‍💻 Equipe de Desenvolvimento <a id="equipe"></a>
 
 O **MZ Smart** foi desenvolvido pela seguinte equipe:
 
-- **Guilherme dos Santos Cavalcante** - RA: 510831
-- **Jorge Bruno Costa Alves** - RA: 509718
-- **Gabriel Ileis Araujo Vieira** - RA: 493973
+- **Guilherme dos Santos Cavalcante** - 510831
+- **Jorge Bruno Costa Alves** - 509718
+- **Gabriel Ileis Araujo Vieira** - 493973
 
 Cada integrante contribuiu para diferentes aspectos do projeto, incluindo desenvolvimento frontend, backend, e integração com banco de dados.
 

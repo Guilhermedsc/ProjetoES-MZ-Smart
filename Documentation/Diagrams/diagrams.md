@@ -1,5 +1,5 @@
 ## Diagrama de Classes
-![Diagrama de Classes](./imgs/diagramClass.png)
+![Diagrama de Classes](./imgs/classDiagram.png)
 
 Este diagrama de classes descreve a estrutura de um sistema de gerenciamento de clientes e aparelhos, juntamente com as operações que podem ser realizadas no sistema.
 
