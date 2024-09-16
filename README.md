@@ -4,7 +4,7 @@
 
 ## 📋 Sumário
 - [📖 Sobre o Projeto](#sobre)
-- [🌐 Acesso ao Ambiente de Desenvolvimento](#dev)
+- [🌐 Acesso ao Deploy do projeto (Ambiente de desenvolvimento)](#dev)
 - [✨ Funcionalidades Principais](#funcionalidades)
 - [💻 Tecnologias Utilizadas](#tecnologias)
 - [🔧 Requisitos](#requisitos)
@@ -21,11 +21,13 @@ O **MZ Smart** é uma plataforma web desenvolvida para simplificar e organizar o
 
 Este projeto foi criado com o intuito de atender às necessidades do nosso cliente, possibilitando a visualização rápida do status de dispositivos e a geração de relatórios detalhados de clientes e aparelhos.
 
-## 🌐 Acesso ao Ambiente de Desenvolvimento <a id="dev"></a>
+## 🌐 Acesso ao Deploy do projeto (Ambiente de desenvolvimento)<a id="dev"></a>
 
 O projeto está disponível para acesso em ambiente de desenvolvimento através do seguinte link:
-
 <a href="http://206.42.26.185:3002/" target="_blank">http://206.42.26.185:3002/</a>
+
+**OBS:** O deploy não foi realizado em plataformas como Vercel devido ao uso de HTTP em vez de HTTPS, o que gera restrições e solicitações de permissões para o acesso. Por isso, o sistema foi implantado em uma máquina particular.
+
 ## ✨ Funcionalidades Principais <a id="funcionalidades"></a>
 - ✅ **Cadastro e Gerenciamento de Clientes**: Interface intuitiva para adicionar, editar e visualizar clientes, bem como associar dispositivos aos perfis.
 - 📱 **Gerenciamento de Aparelhos**: Cadastro detalhado de dispositivos, com informações como modelo, nome do cliente, descrição do problema, status do aparelho, senha e IMEI
