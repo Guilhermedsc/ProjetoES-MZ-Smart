@@ -13,10 +13,11 @@
 - [📊 Diagramas](#diagramas)
 - [👨‍💻 Equipe de Desenvolvimento](#equipe)
 - [📥 Contribuições](#contrib)
+- [🤖 Testes unitários(backend)](#testesUnit)
 - [📝 Testes sistemicos](#testes)
 
 ## 📖 Sobre o Projeto <a id="sobre"></a>
-O **MZ Smart** é uma plataforma web desenvolvida para simplificar e organizar o fluxo de trabalho de assistências técnicas de celulares e tablets. O sistema permite o gerenciamento de clientes, dispositivos e pedidos de serviço de maneira eficiente, facilitando a administração diária e a rastreabilidade de informações.
+O **MZ Smart** é uma plataforma web desenvolvida para simplificar e organizar o fluxo de trabalho da assistência técnica MZSmart de celulares e tablets etc. O sistema permite o gerenciamento de clientes, dispositivos e pedidos de serviço de maneira eficiente, facilitando a administração diária e a rastreabilidade de informações.
 
 Este projeto foi criado com o intuito de atender às necessidades do nosso cliente, possibilitando a visualização rápida do status de dispositivos e a geração de relatórios detalhados de clientes e aparelhos.
 
@@ -118,7 +119,7 @@ Detalham os fluxos dos principais requisitos funcionais (RFs), como cadastro, ed
 
 Veja os diagramas [aqui](./Documentation/Diagrams/diagrams.md).
 
-## 🤖 Testes Unitários <a id="testesUnit"></a>
+## 🤖 Testes Unitários(backend) <a id="testesUnit"></a>
 
 Implementamos 25 testes unitários para garantir a robustez e o funcionamento correto do backend. Estes testes cobrem todas as rotas principais e funcionalidades do sistema, incluindo operações de criação, leitura, atualização e exclusão.
 Abordagem dos Testes
